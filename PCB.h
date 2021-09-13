@@ -29,4 +29,6 @@ class PCB{
 
     void setState(processStates state);
     processStates getState();
+    
+    ostream& operator << (ostream&,const PCB&);
 };
