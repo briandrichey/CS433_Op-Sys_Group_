@@ -14,11 +14,17 @@ void ReadyQueue::addPCB(PCB& process){
     
     process.setState(READY);
     processMaxHeap->insert(process);
+    
+    int numID = process.getID();
+    cout<<"PCB "<< numID <<" added to priority queue."<<endl;
 
 }
 
 //should just be able to call maxheap.extractMax, set state to running,
 PCB* ReadyQueue::removePCB(){
+    
+    cout<<"Highest priority PCB removed from priority queue."<<endl;
+    
     return processMaxHeap->getMax();
 }
 
