@@ -17,11 +17,11 @@ q2.size(100);
  PCB p4 (39,39,NEW);
  PCB p5 (8,8,NEW);
  
-q1.add(15); //fill queue with PCBs (should change state to READY)***
-q1.add(6); //should it be q1.add(15) or q1.add(p1)???????
-q1.add(23);
-q1.add(39);
-q1.add(8);
+q1.add(p1); //fill queue with PCBs (should change state to READY)***
+q1.add(p2); //should it be q1.add(15) or q1.add(p1)???????
+q1.add(p3);
+q1.add(p4);
+q1.add(p5);
  
 q1.remove(); //should change p2 "6" state to RUNNING ***
 q1.display();// displays all except 6
@@ -31,10 +31,10 @@ q1.display();// displays all except 6
  PCB p8 (37,37,NEW);
  PCB p9 (5,5,NEW);
  
-q1.add(47);//fill queue with PCBs (should change state to READY)***
-q1.add(1);
-q1.add(37);
-q1.add(5);
+q1.add(p6);//fill queue with PCBs (should change state to READY)***
+q1.add(p7);
+q1.add(p8);
+q1.add(p9);
  
 q1.remove(); //should change p7 "1" state to "RUNNING" ***
 q1.display(); // displays all except 1
@@ -44,6 +44,11 @@ q1.display(); // displays all except 1
  PCB p12 (32,32,NEW);
  PCB p13 (12,12,NEW);
  PCB p14 (19,19,NEW);
+ 
+q1.add(p10);//fill queue with PCBs (should change state to READY)***
+q1.add(p11);
+q1.add(p12);
+q1.add(p13);
  
  for(int = 0; i < q1.size(); i++){ //removes one at a time then displays q1 priority queue
   q1.remove();
