@@ -1,19 +1,20 @@
 #include <iostream>
 #include <math> //????
+#include "ReadyQueue.h"
 using namespace std; 
 
 int main{
 
-readyQueue q1, q2;
+ReadyQueue q1, q2;
 
 q1.size(50);
 q2.size(100);
 
 q1.add(15);
 q1.add(6);
-.
-.
-.
+//.
+//.
+//.
 
 
 q1.display();
