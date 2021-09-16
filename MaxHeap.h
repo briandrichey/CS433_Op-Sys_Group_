@@ -1,5 +1,7 @@
+#pragma once
 #include <vector>
 #include "PCB.h"
+
 
 class MaxHeap{
 private:
@@ -7,7 +9,7 @@ private:
 
 public:
     MaxHeap(); 
-    vector<PCB*> processList;
+    std::vector<PCB*> processList;
 
     int getSize();
     void display();
