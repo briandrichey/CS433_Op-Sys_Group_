@@ -1,7 +1,4 @@
-/**
- *  The ready queue will implement a max heap, so we need all the heap functions 
-*/
-
+#pragma once
 #include "PCB.h"
 #include "MaxHeap.h"
 

@@ -13,7 +13,7 @@ PCB::PCB(){
 PCB::PCB(int id, int prio, processStates state){
     this->id = id;
     this->prio = prio;
-    this->state = state;
+    this->state = NEW;
 }
 
 void PCB::setID(int id){
@@ -39,11 +39,4 @@ int PCB::getPrio(){
 processStates PCB::getState(){
     return this->state;
 }
-
-ostream& operator<< (ostream& os,const PCB& process){
-    int numID = process.getID();
-    
-    os<<
-        
-    }
 

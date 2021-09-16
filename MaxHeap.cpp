@@ -55,5 +55,8 @@ void MaxHeap::swap(PCB& a, PCB& b){
 }
 
 void MaxHeap::insert(PCB& process){
-    //need to follow older code from cs311 - asgn 4
+    int i = size;
+    processList[i] = process;
+    siftUp(i);
+    size++;
 }

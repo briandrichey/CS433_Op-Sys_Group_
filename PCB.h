@@ -1,6 +1,5 @@
+#pragma once
 #include <iostream>
-
-using namespace std;
 
 enum processStates{
     //different process states for the PCB
@@ -29,6 +28,4 @@ class PCB{
 
     void setState(processStates state);
     processStates getState();
-    
-    ostream& operator << (ostream&,const PCB&);
 };
