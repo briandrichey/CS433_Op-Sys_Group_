@@ -40,10 +40,5 @@ processStates PCB::getState(){
     return this->state;
 }
 
-ostream& operator<< (ostream& os,const PCB& process){
-    int numID = process.getID();
-    
-    os<<
-        
-    }
+displa
 
