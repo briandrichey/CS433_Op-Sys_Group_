@@ -1,15 +1,12 @@
-/**
- *  The ready queue will implement a max heap, so we need all the heap functions 
-*/
-
+#pragma once
 #include "PCB.h"
 #include "MaxHeap.h"
 
-class ReadyQueue{
+class ReadyQueue {
 
 public:
     ReadyQueue();
-    ~ReadyQueue();  
+    ~ReadyQueue();
 
     MaxHeap * processMaxHeap; //heap is going to be used in ReadyQueue to enable us to easily extract highest prio
 

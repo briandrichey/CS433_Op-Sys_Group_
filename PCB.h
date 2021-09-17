@@ -1,8 +1,9 @@
+#pragma once
 #include <iostream>
 
 using namespace std;
 
-enum processStates{
+enum processStates {
     //different process states for the PCB
     NEW,
     READY,
@@ -11,16 +12,16 @@ enum processStates{
     TERMINATED
 };
 
-class PCB{
+class PCB {
     int id;
     int prio;
     processStates state;
 
-    public:
+public:
     PCB();
     PCB(int id, int prio, processStates state);
     ~PCB();
-    
+
     void setID(int id);
     int getID();
 
@@ -30,5 +31,5 @@ class PCB{
     void setState(processStates state);
     processStates getState();
     
-    ostream& operator << (ostream&,const PCB&);
+    void display();
 };

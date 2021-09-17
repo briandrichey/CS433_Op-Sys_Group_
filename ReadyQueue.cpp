@@ -1,39 +1,33 @@
 #include "ReadyQueue.h"
 
-ReadyQueue::~ReadyQueue(){
-    //delete heap here
+//Default deconstructor
+ReadyQueue::~ReadyQueue() {  }
+
+//Creating the ReadyQueue will invoke creation of a new MaxHeap
+ReadyQueue::ReadyQueue() {
+    processMaxHeap = new MaxHeap();
 }
 
-ReadyQueue::ReadyQueue(){
-    //not sure what to put in ready queue constructor?
-    //vector is made in the maxheap.cpp and maxheap is created readyqueue.h
-}
-
-void ReadyQueue::addPCB(PCB& process){
-    //adding to queue -> stored as heap
-    
+//Takes a PCB address as parameter, sets processState to READY, and invokes the insert() function from MaxHeap
+void ReadyQueue::addPCB(PCB& process) {
     process.setState(READY);
-    processMaxHeap->insert(process);
-    
-    int numID = process.getID();
-    cout<<"PCB "<< numID <<" added to priority queue."<<endl;
 
+    //cout << "Adding PCB " << process.getID() << " to priority queue." << endl;
+
+    processMaxHeap->insert(process);
 }
 
-//should just be able to call maxheap.extractMax, set state to running,
-PCB* ReadyQueue::removePCB(){
-    
-    cout<<"Highest priority PCB removed from priority queue."<<endl;
-    
+//Returns a pointer to PCB, invokes getMax() function from MaxHeap
+PCB* ReadyQueue::removePCB() {
     return processMaxHeap->getMax();
 }
 
-int ReadyQueue::size(){
-    return processMaxHeap->getSize(); //return how many process in the queue
+//Simply calls MaxHeap getSize() function and returns it
+int ReadyQueue::size() {
+    return processMaxHeap->getSize(); 
 }
 
-void ReadyQueue::display(){
-    //print the contents of the heap
+//Displaying the whole PCB ReadyQueue will display all READY processes
+void ReadyQueue::display() {
     processMaxHeap->display();
 }
-
