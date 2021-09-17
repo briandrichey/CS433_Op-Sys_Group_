@@ -67,5 +67,10 @@ for(int i=0; i<100; i++){
  
  for(int i=0; i<1000000; i++){
   int coinFlip = rand(23) % 2;
-  if
+  if(coinFlip==1){
+   //add PCB
+  }
+  else{
+   //remove 
+  }
   }
