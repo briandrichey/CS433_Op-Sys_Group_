@@ -40,5 +40,4 @@ processStates PCB::getState(){
     return this->state;
 }
 
-displa
 
