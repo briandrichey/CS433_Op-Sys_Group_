@@ -64,3 +64,8 @@ for(int i=0; i<100; i++){
   int num = rand(23) % 50;
   q2.add(num);
   }
+ for(int i=0; i<1000000; i++){
+   int num = rand(23) % 50;
+  q2.add(num);
+ }
+  
