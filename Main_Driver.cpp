@@ -61,16 +61,20 @@ q1.add(p13);
   
   //-------------Test 2-------------------
 for(int i=0; i<100; i++){
-  int num = rand(23) % 50;
+  int num = rand(23) % 100;
   q2.add(num);
   }
  
+ 
  for(int i=0; i<1000000; i++){
   int coinFlip = rand(23) % 2;
+  int num = rand(23) % 100
+   ;
   if(coinFlip==1){
-   //add PCB
+   q2.addPCB(num);    //add PCB
   }
+  
   else{
-   //remove 
+   q2.removePCB(num);   //remove 
   }
   }
