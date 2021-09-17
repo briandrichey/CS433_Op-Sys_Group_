@@ -42,6 +42,10 @@ void MaxHeap::siftUp(int i){
 
 void MaxHeap::display(){
     //remember we need to print out a header with our info on it
+        for(int i = 0; i<processList.size();i++){
+            proccessList[i].display();
+        }
+            
 }
 
 PCB* MaxHeap::getMax(){
