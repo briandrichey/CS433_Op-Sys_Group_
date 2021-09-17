@@ -9,6 +9,9 @@ ReadyQueue q1, q2;
 
 q1.size(50);
 q2.size(100);
+ 
+ cout << "Names: Danny Ha, Jake Trembley, Brian Richey" << endl;
+ cout << "Short Description: " << endl;
 
  //--------------Test 1----------------------
  PCB p1 (15,15,NEW);//CREATE 5 PCBs
