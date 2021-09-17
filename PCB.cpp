@@ -40,4 +40,16 @@ processStates PCB::getState(){
     return this->state;
 }
 
+void PCB::display(){
+    int pId,pPrio;
+    processStates pState;
+    
+    pID = getID();
+    pPrio= getPrio();
+    pState= getState();
+    
+    cout << "PCB ID:"<< pID <<" /// "<< "Priority: " << pPrio <<" /// "<< "State: " << pState <<endl;   
+}
+   
+        
 
